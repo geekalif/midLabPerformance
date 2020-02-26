@@ -26,9 +26,9 @@
 			<tr>
 				<td>Gender: </td>
 				<td> 
-					<input type="radio" name="gender" value="1">Male 
-					<input type="radio" name="gender" value="2">Female
-					<input type="radio" name="gender" value="3">Other
+					<input type="radio" name="gender" value="male">Male 
+					<input type="radio" name="gender" value="female">Female
+					<input type="radio" name="gender" value="other">Other
 				</td>
 				<td>  </td>
 			</tr>
@@ -42,7 +42,7 @@
 <!-- 			<tr>
 				<td>Blood Gtroup</td>
 				<td>
-					<select>
+					<select name="blood" id="blood">
 						<option>A+</option>
 						<option>A-</option>
 						<option>B+</option>
@@ -61,10 +61,10 @@
 			<tr>
 				<td>Degree</td>
 				<td>
-					<input type="checkbox" name="">SSC
-					<input type="checkbox" name="">HSC
-					<input type="checkbox" name="">BSc.
-					<input type="checkbox" name="">MSc.
+					<input type="checkbox" name="degree">SSC
+					<input type="checkbox" name="degree">HSC
+					<input type="checkbox" name="degree">BSc.
+					<input type="checkbox" name="degree">MSc.
 				</td>
 				<td>  </td>
 			</tr>

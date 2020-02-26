@@ -1,37 +1,63 @@
 <?php
-	
-	if( isset($_REQUEST['submit'])){
-		$name = $_REQUEST['name'];
-		$email = $_REQUEST['email'];
-		$radioButton = $_REQUEST['gender'];
-		$dd = $_REQUEST['dd'];
-		$mm = $_REQUEST['mm'];
-		$yy = $_REQUEST['yy'];
 
-		
+	$name = $_REQUEST['name'];
+	$email = $_REQUEST['email'];
+	$day = $_REQUEST['day'];
+	$month = $_REQUEST['month'];
+	$year = $_REQUEST['year'];
+
+	if( isset($_POST['name'])){
 		if(empty(trim($name)) || strlen(trim($name)) < 2 || is_numeric($name[0]) == true){
-			echo "Unvailid name";
-		}
-
-		function checkEmail() {
-    		for ($i=0; $i <strlen($email); $i++) { 
-    			# code...
-    		}
-		}
-
-
-
-		if(){
-
-		}
-		
-		if(!filter_var($email, FILTER_VALIDATE_EMAIL) || $radioButton == null || (!((((int)$dd >=1) && ((int)$dd <=31)) && (((int)$mm >= 1) && ((int)$mm <= 12)) && (((int)$yy >= 1900) && ((int)$yy <= 2016))))){
-			echo "Unvalid Submission";
+			echo "Unvailid Name";
 		}
 		else{
-			echo "success";
+			echo "Name Submission Success";
 		}
-
 	}
+
+	if( isset($_POST['email'])){
+		if(!empty((trim($email))) && (strpos($email,'@') != true)){
+			echo "Invalid Email";
+		}
+		else{
+			echo "Email Submission Success";
+		}
+	}
+
+	if (isset($_POST['gender'])) {
+		$gender = $_REQUEST['gender'];
+		if (empty($gender)) {
+			echo "Invalid Gender";
+		}
+		else{
+			echo "Gender Submission Success";
+		}
+	}
+
+	if (((!empty(trim(day))) && (!empty(trim(month))) (!empty(trim(year)))) && ($day >= 1 || $day <=31) && ($month >= 1 || $month <=12) && ($year >= 1980 || $year <=2000)) {
+		echo "Date Submission Success";
+	}
+	else{
+		echo "Invalid Date";
+	}
+
+
+
+		
+
+		// $blood = $_REQUEST['blood'];
+		// $picture = $_REQUEST["fileupload"];
+
+
+
+		// function nameCheck(){
+			
+		// }
+		
+		// nameCheck();
+		// emailCheck();
+
+
+
 
 ?>
